@@ -1,0 +1,30 @@
+#myButton {
+    position: absolute;
+margin-top: 70px;
+    background-color: red;
+    outline: none;
+}
+h1{
+    text-align: center;
+}
+#contenedor{
+    padding: 20px ;
+    display: flex;
+
+    justify-content: center;
+}
+.boton{
+    box-shadow: 10px 10px 10px rgba(199, 198, 198, 0.48);
+    color: aliceblue;
+    background-color: cornflowerblue;
+    margin: 0;
+    border: none;
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    transition: 0.1s;
+}
+.boton:hover{
+    transform: scale(1.1);
+}
