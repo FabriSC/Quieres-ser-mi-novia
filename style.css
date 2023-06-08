@@ -1,20 +1,30 @@
+html{
+    max-height: 100vh;
+}
+
 #myButton {
+   top: 190px;
     position: absolute;
-margin-top: 70px;
-    background-color: red;
+    background-color: #e81919;
     outline: none;
 }
 h1{
+    font-size: 60px;
+    font-family: Candara;
     text-align: center;
 }
 #contenedor{
-    padding: 20px ;
-    display: flex;
 
+    display: flex;
     justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+
+
 }
 .boton{
-    box-shadow: 10px 10px 10px rgba(199, 198, 198, 0.48);
+    position: absolute;
     color: aliceblue;
     background-color: cornflowerblue;
     margin: 0;
@@ -27,4 +37,54 @@ h1{
 }
 .boton:hover{
     transform: scale(1.1);
+}
+audio{
+}
+
+/*estilos del corazon*/
+
+
+.corazon{
+    top: 350px;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #ff4757;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #ff4757;
+    animation: animate 1s linear infinite;
+    z-index: -1;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+
+.corazon::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 200px;
+    height: 200px;
+    background: #ff4757;
+    border-radius: 50%;
+    box-shadow: -10px -10px 90px #ff4757;
+}
+.corazon::after{
+    content: '';
+    position: absolute;
+    right: -50%;
+    width: 200px;
+    height: 200px;
+    background: #ff4757;
+    border-radius: 50%;
+    box-shadow: 10px 10px 90px #ff4757;
 }
